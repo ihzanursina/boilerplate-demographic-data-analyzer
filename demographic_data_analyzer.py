@@ -8,7 +8,7 @@ def calculate_demographic_data(print_data=True):
 
   average_age_men = round(df[df['sex'] == 'Male']['age'].mean(), 1)
 
-  percentage_bachelors = round((df['education']== 'Bachelors').mean() * 100, 1)
+  percentage_bachelors = round(((df['education']== 'Bachelors').mean() * 100), 1)
 
   higher_education = df['education'].isin(['Bachelors', 'Masters', 'Doctorate'])
   lower_education = ~higher_education
